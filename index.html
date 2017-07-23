@@ -9,8 +9,8 @@
 
 <body>
     <div id="app">
-        <Loading :value="curvalue"></Loading>
-        <input type="text" v-model="v" @change="validate">
+        <!-- <Loading :msg="curvalue"></Loading> -->
+        <input class="ffff" type="text" v-model="v" @input="validate" v-validate.fun="123">
     </div>
     <script src="/node_modules/vue/dist/vue.min.js"></script>
     <script src="/dist/index.js"></script>
@@ -21,12 +21,12 @@
             data() {
                 return {
                     curvalue: 'dddddddd',
-                    v: ""
+                    v: "11"
                 }
             },
             methods: {
                 validate() {
-                    this.checkValue(this.v);
+                    console.log(this.checkValue(this.v));
                 }
             }
         })
