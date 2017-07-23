@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>my-project</title>
-  </head>
-  <body>
-    <div id="app"></div>
+
+</head>
+
+<body>
+    <div id="app">
+        <Loading></Loading>
+    </div>
+    <script src="/node_modules/vue/dist/vue.min.js"></script>
     <script src="/dist/build.js"></script>
-  </body>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    curvalue: 'Welcome to Your Vue.js weqew'
+                }
+            }
+        })
+    </script>
+
+</body>
+
 </html>
