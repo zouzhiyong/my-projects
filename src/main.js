@@ -14,25 +14,39 @@
 //     },
 //     render: h => h(App)
 // })
+//********************* */
+// import Loading from './index.js';
 
-import Loading from './index.js';
+// const components = [
+//     Loading
+// ]
 
-const components = [
-    Loading
-]
+// const install = function(Vue, opts = {}) {
+//     /* istanbul ignore if */
+//     if (install.installed) return;
+//     components.map(component => {
+//         Vue.component(component.name, component);
+//     });
+// };
 
-const install = function(Vue, opts = {}) {
-    /* istanbul ignore if */
-    if (install.installed) return;
-    components.map(component => {
-        Vue.component(component.name, component);
-    });
-};
+// if (typeof window !== 'undefined' && window.Vue) {
+//     install(window.Vue);
+// };
+
+// module.exports = {
+//     Loading
+// };
+
+
+
+import MyLoading from './Loading.vue';
+
+// MyLoading.install = function(Vue) {
+//     Vue.component(MyLoading.name, MyLoading);
+// };
 
 if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
+    window.Vue.component(MyLoading.name, MyLoading);
 };
 
-module.exports = {
-    Loading
-};
+export default MyLoading;
