@@ -8,18 +8,25 @@
 </head>
 
 <body>
-    <div class="loading">ddddd</div>
     <div id="app">
         <Loading :value="curvalue"></Loading>
+        <input type="text" v-model="v" @change="validate">
     </div>
     <script src="/node_modules/vue/dist/vue.min.js"></script>
-    <script src="/dist/build.js"></script>
+    <script src="/dist/index.js"></script>
+    <script src="/dist/validate.js"></script>
     <script>
         new Vue({
             el: '#app',
             data() {
                 return {
-                    curvalue: 'dddddddd'
+                    curvalue: 'dddddddd',
+                    v: ""
+                }
+            },
+            methods: {
+                validate() {
+                    this.checkValue(this.v);
                 }
             }
         })

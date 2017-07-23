@@ -12,8 +12,8 @@
 
 import MyLoading from './Loading.vue';
 
-MyLoading.install = function(Vue) {
-    Vue.component(MyLoading.name, MyLoading);
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.component(MyLoading.name, MyLoading);
 };
 
 export default MyLoading;

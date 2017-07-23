@@ -2,11 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-    entry: path.resolve(__dirname, './src/main.js'),
+    entry: {
+        "index": path.resolve(__dirname, './src/index.js'),
+        "validate": path.resolve(__dirname, './src/validate.js')
+    },
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
-        filename: 'build.js',
+        filename: '[name].js',
         libraryTarget: "umd"
     },
     module: {
